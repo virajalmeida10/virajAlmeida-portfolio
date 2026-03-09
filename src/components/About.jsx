@@ -1,5 +1,3 @@
-import profilePhoto from '../assets/viraj-almeida.jpg'
-
 const stats = [
   { number: '4+', label: 'Years Experience' },
   { number: '3', label: 'Industries Served' },
@@ -52,18 +50,23 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right: profile photo */}
+        {/* Right: photo placeholder */}
         <div className="about-photo-wrapper fade-in-up delay-2">
           <div style={{ position: 'relative' }}>
             <div className="about-photo-glow" aria-hidden="true"></div>
             <div className="about-photo-frame" aria-label="Profile photo of Viraj Almeida">
               <div className="about-photo-inner">
-                <img
-                  src={profilePhoto}
-                  alt="Viraj Almeida — Data Analytics & Engineering Specialist"
-                  loading="lazy"
-                  className="about-photo-img"
-                />
+                {/*
+                  TODO: Replace the initials block below with a real photo:
+                  import profilePhoto from '../assets/viraj-almeida.jpg'
+                  <img
+                    src={profilePhoto}
+                    alt="Viraj Almeida — Data Analytics & Engineering Specialist"
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                */}
+                <span className="about-initials" aria-hidden="true">VA</span>
               </div>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import profilePhoto from '../assets/viraj-almeida.jpg'
+
 const stats = [
   { number: '4+', label: 'Years Experience' },
   { number: '3', label: 'Industries Served' },
@@ -57,7 +59,7 @@ export default function About() {
             <div className="about-photo-frame" aria-label="Profile photo of Viraj Almeida">
               <div className="about-photo-inner">
                 <img
-                  src="/src/assets/viraj-almeida.jpg"
+                  src={profilePhoto}
                   alt="Viraj Almeida — Data Analytics & Engineering Specialist"
                   loading="lazy"
                   className="about-photo-img"

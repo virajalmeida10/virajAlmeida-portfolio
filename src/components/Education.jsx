@@ -10,6 +10,9 @@ const educationData = [
       'Data Analytics',
       'Enterprise Architecture',
     ],
+    /* TODO: Replace with actual education details */
+    description:
+      'This program focused on the intersection of business systems and modern technology infrastructure, with deep emphasis on cloud architecture, data management, and enterprise-scale application design. Core coursework covered distributed computing environments, secure system design, and advanced database engineering — providing the architectural foundation for production-grade data platforms. Developed hands-on expertise in cloud-native tooling across AWS and Azure, directly applied to real-world data engineering work during concurrent industry roles.',
   },
   {
     degree: 'Bachelor of Engineering in Information Technology',
@@ -22,6 +25,9 @@ const educationData = [
       'SDLC',
       'Data Structures & Algorithms',
     ],
+    /* TODO: Replace with actual education details */
+    description:
+      'A rigorous four-year engineering program grounding fundamentals across systems design, programming, and data management. Coursework in database management systems and data structures built the foundation for later work in large-scale ETL pipeline design and query optimization. Java programming and SDLC exposure shaped a structured, test-driven approach to software delivery that carries through into current data engineering practice.',
   },
 ]
 
@@ -47,6 +53,9 @@ export default function Education() {
             <h3 className="edu-degree">{edu.degree}</h3>
             <div className="edu-institution">{edu.institution}</div>
             <div className="edu-year">{edu.year}</div>
+
+            {/* TODO: Replace with actual education details */}
+            <p className="edu-description">{edu.description}</p>
 
             <div className="edu-coursework-label">Related Coursework</div>
             <div className="edu-courses" role="list" aria-label={`Coursework at ${edu.institution}`}>

@@ -4,8 +4,9 @@ const projects = [
   {
     title: 'E-Commerce Data Lakehouse Modernization',
     stack: 'Azure Databricks · PySpark · Delta Lake · Azure Data Factory',
+    // TODO: Add your project description and impact
     description:
-      'Designed an end-to-end Medallion architecture pipeline ingesting e-commerce data into Azure Data Lake, processing and transforming raw data through bronze, silver, and gold layers using Apache Spark and Delta Lake.',
+      '[ Your project description goes here — describe what you built, the technical approach, and the business impact. ]',
     tags: ['Azure', 'PySpark', 'Delta Lake', 'ADF', 'Databricks'],
     featured: true,
     // TODO: Replace '#' with the actual GitHub repository URL
@@ -16,8 +17,9 @@ const projects = [
   {
     title: 'Healthcare Data Ingestion Platform',
     stack: 'Python · REST APIs · PostgreSQL · Validation Layers',
+    // TODO: Add your project description and impact
     description:
-      'Architected backend ingestion pipelines with structured validation for medical inquiry workflows, ensuring compliant, auditable data flow for healthcare analytics. Reduced manual processing effort by 60%.',
+      '[ Your project description goes here — describe what you built, the technical approach, and the business impact. ]',
     tags: ['Python', 'REST APIs', 'PostgreSQL', 'Healthcare', 'ETL'],
     featured: false,
     // TODO: Replace '#' with the actual GitHub repository URL
@@ -28,8 +30,9 @@ const projects = [
   {
     title: 'SAP Procurement Analytics Dashboard',
     stack: 'SAP · Python · SQL · Power BI',
+    // TODO: Add your project description and impact
     description:
-      'Automated SAP data sync schedulers delivering real-time KPI dashboards across procurement, vendor, and cost center data — improving financial visibility and cross-functional decision-making at scale.',
+      '[ Your project description goes here — describe what you built, the technical approach, and the business impact. ]',
     tags: ['SAP', 'Python', 'SQL', 'Power BI', 'Analytics'],
     featured: false,
     // TODO: Replace '#' with the actual GitHub repository URL
@@ -40,8 +43,9 @@ const projects = [
   {
     title: 'Ad Performance Intelligence Platform',
     stack: 'Hive · Python · SQL · Power BI',
+    // TODO: Add your project description and impact
     description:
-      'Built scalable Hive-based pipelines for keyword performance analysis and threshold optimization — driving a 10% revenue increase and 50% reduction in reporting pipeline processing time.',
+      '[ Your project description goes here — describe what you built, the technical approach, and the business impact. ]',
     tags: ['Hive', 'Python', 'SQL', 'Power BI', 'Ad Tech'],
     featured: false,
     // TODO: Replace '#' with the actual GitHub repository URL
@@ -106,7 +110,8 @@ function ProjectCard({ project, index }) {
 
       <h3 className="project-title">{project.title}</h3>
       <div className="project-stack">{project.stack}</div>
-      <p className="project-description">{project.description}</p>
+      {/* TODO: Add your project description and impact */}
+      <p className="project-description project-description--placeholder">{project.description}</p>
 
       <div className="project-tags" role="list" aria-label={`Technologies used in ${project.title}`}>
         {project.tags.map((tag) => (

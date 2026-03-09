@@ -203,7 +203,7 @@ export default function Hero() {
 
         {/* Role */}
         <p className="hero-role">
-          Data Engineer &amp; Analytics Architect
+          Data Analytics &amp; Engineering Specialist
         </p>
 
         {/* Typewriter */}

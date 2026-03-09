@@ -50,22 +50,18 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right: photo placeholder */}
+        {/* Right: profile photo */}
         <div className="about-photo-wrapper fade-in-up delay-2">
           <div style={{ position: 'relative' }}>
             <div className="about-photo-glow" aria-hidden="true"></div>
             <div className="about-photo-frame" aria-label="Profile photo of Viraj Almeida">
               <div className="about-photo-inner">
-                {/*
-                  TODO: Replace the initials block below with a real photo:
-                  <img
-                    src="/assets/viraj-almeida.jpg"
-                    alt="Viraj Almeida — Data Engineer"
-                    loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                */}
-                <span className="about-initials" aria-hidden="true">VA</span>
+                <img
+                  src="/src/assets/viraj-almeida.jpg"
+                  alt="Viraj Almeida — Data Analytics & Engineering Specialist"
+                  loading="lazy"
+                  className="about-photo-img"
+                />
               </div>
             </div>
           </div>

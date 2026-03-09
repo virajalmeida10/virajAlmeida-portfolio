@@ -71,6 +71,63 @@ export default function AIAutomation() {
             ))}
           </div>
         </div>
+
+        {/* Featured Case Study */}
+        <div className="case-study-card fade-in-up delay-3" aria-label="AI pipeline automation case study">
+          <div className="case-study-header">
+            <div className="case-study-title-row">
+              <span className="case-study-label">CASE STUDY</span>
+            </div>
+            <h3 className="case-study-title">Intelligent Data Pipeline Automation</h3>
+            <div className="case-study-meta">
+              Industry: Healthcare Analytics &nbsp;|&nbsp; Stack: Python · GPT-4 API · Apache Airflow · dbt · Snowflake · AWS Lambda
+            </div>
+          </div>
+
+          <div className="case-study-body">
+            <div className="case-study-block">
+              <span className="case-study-section-label">THE CHALLENGE</span>
+              <p className="case-study-text">
+                A regional healthcare network was spending 30+ hours per week manually writing dbt transformation
+                models, data quality checks, and pipeline documentation across 200+ source tables ingested from
+                EHR, claims, and lab systems.
+              </p>
+            </div>
+
+            <div className="case-study-block">
+              <span className="case-study-section-label">WHAT WAS BUILT</span>
+              <p className="case-study-text">An AI-driven metadata pipeline that automatically:</p>
+              <ul className="case-study-bullets">
+                <li>Scanned raw source schemas using a Python-based crawler</li>
+                <li>Sent schema context + business glossary to GPT-4 API to generate dbt staging and mart models (SQL), dbt YAML schema files with column descriptions and tests, Airflow DAG templates for orchestration, and plain-English data dictionary entries for each table</li>
+                <li>Validated AI-generated SQL against a test Snowflake environment using automated dry-run execution before promotion to production</li>
+                <li>Pushed approved models to GitHub via API and triggered CI/CD via GitHub Actions for dbt Cloud deployment</li>
+              </ul>
+            </div>
+
+            <div className="case-study-block">
+              <span className="case-study-section-label">AUTOMATION STACK</span>
+              <div className="case-study-stack-flow">
+                {['Python orchestration', 'GPT-4 API', 'dbt Cloud', 'GitHub Actions', 'Snowflake'].map((step, i, arr) => (
+                  <span key={step} className="case-study-stack-item">
+                    {step}{i < arr.length - 1 && <span className="case-study-arrow"> → </span>}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="case-study-block">
+              <span className="case-study-section-label">IMPACT</span>
+              <ul className="case-study-impact-list">
+                <li><span className="impact-check">✓</span> Reduced pipeline build time from 3 weeks → 2 days per new data source</li>
+                <li><span className="impact-check">✓</span> 85% reduction in manual documentation effort</li>
+                <li><span className="impact-check">✓</span> 40% fewer data quality incidents in first 90 days post-deployment</li>
+                <li><span className="impact-check">✓</span> Team of 3 engineers effectively operated at the capacity of 8</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   )

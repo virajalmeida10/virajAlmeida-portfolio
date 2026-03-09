@@ -83,12 +83,8 @@ export default function Contact() {
             </p>
 
             <nav className="social-links" aria-label="Social and contact links">
-              {/*
-                TODO: Replace the href="#" below with your actual LinkedIn profile URL.
-                Example: href="https://www.linkedin.com/in/viraj-almeida/"
-              */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/viraj-almeida"
                 className="social-link"
                 aria-label="Connect with Viraj Almeida on LinkedIn"
                 rel="noopener noreferrer"
@@ -97,17 +93,12 @@ export default function Contact() {
                 <LinkedInIcon />
                 <span>LinkedIn</span>
                 <span style={{ marginLeft: 'auto', fontSize: '0.7rem', color: 'var(--color-text-3)', fontFamily: 'var(--font-mono)' }}>
-                  {/* TODO: Add your LinkedIn handle here, e.g. /in/viraj-almeida */}
                   /in/viraj-almeida
                 </span>
               </a>
 
-              {/*
-                TODO: Replace the href="#" below with your actual GitHub profile URL.
-                Example: href="https://github.com/virajalmeida"
-              */}
               <a
-                href="#"
+                href="https://github.com/virajalmeida10"
                 className="social-link"
                 aria-label="View Viraj Almeida's GitHub profile"
                 rel="noopener noreferrer"
@@ -116,8 +107,7 @@ export default function Contact() {
                 <GitHubIcon />
                 <span>GitHub</span>
                 <span style={{ marginLeft: 'auto', fontSize: '0.7rem', color: 'var(--color-text-3)', fontFamily: 'var(--font-mono)' }}>
-                  {/* TODO: Add your GitHub handle here, e.g. @virajalmeida */}
-                  @virajalmeida
+                  @virajalmeida10
                 </span>
               </a>
 

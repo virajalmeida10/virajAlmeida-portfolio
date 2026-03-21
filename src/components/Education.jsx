@@ -12,7 +12,7 @@ const educationData = [
     ],
     /* TODO: Replace with actual education details */
     description:
-      'This program focused on the intersection of business systems and modern technology infrastructure, with deep emphasis on cloud architecture, data management, and enterprise-scale application design. Core coursework covered distributed computing environments, secure system design, and advanced database engineering — providing the architectural foundation for production-grade data platforms. Developed hands-on expertise in cloud-native tooling across AWS and Azure, directly applied to real-world data engineering work during concurrent industry roles.',
+      'Focused on cloud architecture, data management, and enterprise-scale system design. Built the architectural foundation for production-grade data platforms through coursework in distributed computing, secure system design, and advanced database engineering.',
   },
   {
     degree: 'Bachelor of Engineering in Information Technology',
@@ -27,7 +27,7 @@ const educationData = [
     ],
     /* TODO: Replace with actual education details */
     description:
-      'A rigorous four-year engineering program grounding fundamentals across systems design, programming, and data management. Coursework in database management systems and data structures built the foundation for later work in large-scale ETL pipeline design and query optimization. Java programming and SDLC exposure shaped a structured, test-driven approach to software delivery that carries through into current data engineering practice.',
+      'Four-year engineering program covering systems design, programming, and data management fundamentals. Coursework in DBMS and data structures laid the groundwork for ETL pipeline design and query optimization in later industry roles.',
   },
 ]
 

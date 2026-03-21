@@ -1,44 +1,21 @@
 const skillGroups = [
   {
-    title: 'Languages & APIs',
-    icon: '{ }',
-    skills: ['Python', 'Java', 'PySpark', 'JavaScript', 'SQL', 'REST APIs', 'HTML5/CSS3'],
+    title: 'Programming',
+    skills: ['Python', 'PySpark', 'Java', 'JavaScript', 'REST APIs', 'HTML', 'CSS'],
   },
   {
-    title: 'Data & ETL',
-    icon: '⟳',
-    skills: ['Apache Spark', 'Hive', 'Kafka', 'ETL/ELT Pipelines', 'Data Modelling', 'Data Warehousing', 'Delta Lake'],
+    title: 'Databases & Distributed Systems',
+    skills: ['SQL', 'Apache Spark', 'Hive', 'Kafka', 'PostgreSQL', 'MS SQL Server'],
   },
   {
-    title: 'Cloud Platforms',
-    icon: '☁',
-    skills: ['Microsoft Azure', 'AWS', 'Databricks', 'Snowflake', 'BigQuery', 'Azure Data Factory'],
+    title: 'Cloud & Platforms',
+    skills: ['Microsoft Azure', 'Databricks', 'AWS', 'Azure Data Factory', 'Snowflake'],
   },
   {
-    title: 'Databases',
-    icon: '◫',
-    skills: ['PostgreSQL', 'Hive', 'Snowflake', 'BigQuery', 'SQL Server'],
-  },
-  {
-    title: 'Visualization & Analytics',
-    icon: '▦',
-    skills: ['Power BI', 'Tableau', 'KPI Dashboards', 'Data Analysis'],
-  },
-  {
-    title: 'AI & Agentic Systems',
-    icon: '◈',
-    skills: ['Langchain', 'RAG Pipelines', 'Vector Databases', 'Prompt Engineering', 'Multi-Agent Orchestration', 'LLM Integration'],
+    title: 'Data Engineering & Analytics',
+    skills: ['ETL/ELT Pipelines', 'Data Modelling', 'PowerBI', 'Tableau'],
   },
 ]
-
-function SkillPill({ label }) {
-  return (
-    <span className="skill-pill" role="listitem">
-      <span className="pill-dot" aria-hidden="true"></span>
-      {label}
-    </span>
-  )
-}
 
 export default function Skills() {
   return (
@@ -52,21 +29,18 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="skills-grid" role="list" aria-label="Skill categories">
-          {skillGroups.map((group, i) => (
+        <div className="skills-table fade-in-up delay-1" role="list" aria-label="Skill categories">
+          {skillGroups.map((group) => (
             <div
               key={group.title}
-              className={`skill-card fade-in-up delay-${(i % 3) + 1}`}
+              className="skills-row"
               role="listitem"
               aria-label={`${group.title} skills`}
             >
-              <div className="skill-card-title">
-                <span className="skill-card-title-icon" aria-hidden="true">{group.icon}</span>
-                {group.title}
-              </div>
-              <div className="skills-pills" role="list" aria-label={`${group.title} skill list`}>
+              <div className="skills-row-label">{group.title}</div>
+              <div className="skills-row-pills" role="list" aria-label={`${group.title} skill list`}>
                 {group.skills.map((skill) => (
-                  <SkillPill key={skill} label={skill} />
+                  <span key={skill} className="skill-pill" role="listitem">{skill}</span>
                 ))}
               </div>
             </div>

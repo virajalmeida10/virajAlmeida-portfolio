@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 
-// Typewriter hook — cycles through phrases with type + delete animation
 function useTypewriter(phrases, typeSpeed = 60, deleteSpeed = 35, pauseMs = 2200) {
   const [displayText, setDisplayText] = useState('')
   const [phraseIndex, setPhraseIndex] = useState(0)
@@ -8,18 +7,14 @@ function useTypewriter(phrases, typeSpeed = 60, deleteSpeed = 35, pauseMs = 2200
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex]
-
     const tick = () => {
       if (!isDeleting) {
-        // Typing
         setDisplayText((prev) => currentPhrase.substring(0, prev.length + 1))
         if (displayText.length + 1 === currentPhrase.length) {
-          // Pause before deleting
           setTimeout(() => setIsDeleting(true), pauseMs)
           return
         }
       } else {
-        // Deleting
         setDisplayText((prev) => prev.substring(0, prev.length - 1))
         if (displayText.length === 0) {
           setIsDeleting(false)
@@ -28,30 +23,24 @@ function useTypewriter(phrases, typeSpeed = 60, deleteSpeed = 35, pauseMs = 2200
         }
       }
     }
-
-    const delay = isDeleting ? deleteSpeed : typeSpeed
-    const timeout = setTimeout(tick, delay)
+    const timeout = setTimeout(tick, isDeleting ? deleteSpeed : typeSpeed)
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, phraseIndex, phrases, typeSpeed, deleteSpeed, pauseMs])
 
   return displayText
 }
 
-// Canvas particle animation
 function useParticleCanvas(canvasRef) {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-
     const ctx = canvas.getContext('2d')
     let animationId
     let particles = []
-
-    const ACCENT = '0, 212, 255'
+    const ACCENT = '201, 168, 76'
     const PARTICLE_COUNT = 80
     const CONNECTION_DIST = 130
     const MOUSE_REPEL_DIST = 100
-
     const mouse = { x: null, y: null }
 
     const resize = () => {
@@ -66,30 +55,22 @@ function useParticleCanvas(canvasRef) {
     })
 
     class Particle {
-      constructor() {
-        this.reset()
-      }
+      constructor() { this.reset() }
       reset() {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
         this.size = Math.random() * 1.5 + 0.5
-        this.baseX = this.x
-        this.baseY = this.y
         this.speedX = (Math.random() - 0.5) * 0.4
         this.speedY = (Math.random() - 0.5) * 0.4
-        this.opacity = Math.random() * 0.5 + 0.2
+        this.opacity = Math.random() * 0.45 + 0.15
       }
       update() {
         this.x += this.speedX
         this.y += this.speedY
-
-        // Wrap around edges
         if (this.x < 0) this.x = canvas.width
         if (this.x > canvas.width) this.x = 0
         if (this.y < 0) this.y = canvas.height
         if (this.y > canvas.height) this.y = 0
-
-        // Subtle mouse repulsion
         if (mouse.x !== null) {
           const dx = this.x - mouse.x
           const dy = this.y - mouse.y
@@ -135,10 +116,7 @@ function useParticleCanvas(canvasRef) {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      particles.forEach((p) => {
-        p.update()
-        p.draw()
-      })
+      particles.forEach((p) => { p.update(); p.draw() })
       drawConnections()
       animationId = requestAnimationFrame(animate)
     }
@@ -160,16 +138,24 @@ function useParticleCanvas(canvasRef) {
 }
 
 const TYPEWRITER_PHRASES = [
-  'Designing end-to-end data pipelines.',
-  'Engineering lakehouse architectures.',
-  'Building agentic AI workflows.',
-  'Turning raw data into real impact.',
+  'Building ETL/ELT pipelines at scale.',
+  'Designing medallion lakehouse architectures.',
+  'Modelling data for analytics and BI.',
+  'Streaming data with Kafka and Spark.',
+  'Orchestrating pipelines on Azure & AWS.',
+  'Transforming raw data into business value.',
+]
+
+const stats = [
+  { number: '4+',  label: 'Years Experience' },
+  { number: '3',   label: 'Industries Served' },
+  { number: '35%', label: 'Faster Reporting' },
+  { number: '50%', label: 'Pipeline Time Saved' },
 ]
 
 export default function Hero() {
   const canvasRef = useRef(null)
   const typewriterText = useTypewriter(TYPEWRITER_PHRASES)
-
   useParticleCanvas(canvasRef)
 
   const handleCTAClick = (e, href) => {
@@ -180,68 +166,72 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero-section" aria-label="Hero — introduction">
-      {/* Particle canvas */}
-      <canvas
-        ref={canvasRef}
-        className="hero-canvas"
-        aria-hidden="true"
-        style={{ width: '100%', height: '100%' }}
-      />
+      <canvas ref={canvasRef} className="hero-canvas" aria-hidden="true" style={{ width: '100%', height: '100%' }} />
 
       <div className="hero-content">
-        {/* Available badge */}
-        <div className="hero-available-badge" role="status" aria-label="Currently available for opportunities">
-          <span className="dot" aria-hidden="true"></span>
-          Available for opportunities
+
+        {/* ── LEFT: identity ── */}
+        <div className="hero-left">
+          <h1 className="hero-name" aria-label="Viraj Almeida">
+            Viraj<br />
+            <span>Almeida</span>
+          </h1>
+
+          <p className="hero-role">Data Engineer</p>
+
+          <div className="hero-typewriter" aria-live="polite" aria-label="Dynamic specialisation">
+            <span>{typewriterText}</span>
+            <span className="cursor" aria-hidden="true"></span>
+          </div>
+
+          <div className="hero-cta">
+            <a
+              href="#projects"
+              className="btn-primary"
+              onClick={(e) => handleCTAClick(e, '#projects')}
+              aria-label="View my work"
+            >
+              View My Work
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              className="btn-secondary"
+              onClick={(e) => handleCTAClick(e, '#contact')}
+              aria-label="Get in touch"
+            >
+              Get In Touch
+            </a>
+          </div>
         </div>
 
-        {/* Name */}
-        <h1 className="hero-name" aria-label="Viraj Almeida">
-          Viraj<br />
-          <span>Almeida</span>
-        </h1>
+        {/* ── DIVIDER ── */}
+        <div className="hero-divider" aria-hidden="true" />
 
-        {/* Role */}
-        <p className="hero-role">
-          Data Analytics &amp; Engineering Specialist
-        </p>
+        {/* ── RIGHT: about ── */}
+        <div className="hero-right" id="about" aria-label="About Viraj Almeida">
+          <span className="section-label">About</span>
 
-        {/* Typewriter */}
-        <div className="hero-typewriter" aria-live="polite" aria-label="Dynamic role description">
-          <span>{typewriterText}</span>
-          <span className="cursor" aria-hidden="true"></span>
+          <div className="hero-about-text">
+            <p>
+              With 4+ years of experience building and optimizing pipelines across cloud platforms, I engineer data platforms that govern, scale, and power AI systems without breaking production. I write code like a software engineer — with CI/CD, unit testing, and Docker containerization, not just scripts that work on a laptop. I design cost-conscious architectures, treating compute spend as a business decision and choosing the right table formats like Delta Lake based on actual business needs rather than tech trends. I enforce semantic layers and data contracts so business logic is centralized, observable, and AI-ready, not buried in a reporting tool. If an AI agent is making automated decisions downstream, my platform ensures it's working with clean, well-defined, trustworthy data. I don't just move data. I build the infrastructure that makes intelligent, automated decisions possible.
+            </p>
+          </div>
+
+          <div className="hero-stats" role="list" aria-label="Key metrics">
+            {stats.map((s) => (
+              <div key={s.label} className="stat-card" role="listitem" aria-label={`${s.number} ${s.label}`}>
+                <div className="stat-number">{s.number}</div>
+                <div className="stat-label">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Tagline */}
-        <p className="hero-tagline">
-          Building intelligent data systems that turn complexity into clarity.
-        </p>
-
-        {/* CTA buttons */}
-        <div className="hero-cta">
-          <a
-            href="#projects"
-            className="btn-primary"
-            onClick={(e) => handleCTAClick(e, '#projects')}
-            aria-label="View my work — scroll to projects section"
-          >
-            View My Work
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a
-            href="#contact"
-            className="btn-secondary"
-            onClick={(e) => handleCTAClick(e, '#contact')}
-            aria-label="Get in touch — scroll to contact section"
-          >
-            Get In Touch
-          </a>
-        </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="hero-scroll-indicator" aria-hidden="true">
         <span>Scroll</span>
         <div className="scroll-mouse">

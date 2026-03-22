@@ -15,6 +15,10 @@ const skillGroups = [
     title: 'Data Engineering & Analytics',
     skills: ['ETL/ELT Pipelines', 'Data Modelling', 'PowerBI', 'Tableau'],
   },
+  {
+    title: 'AI & LLM Integration',
+    skills: ['Claude API', 'LLM Pipelines', 'Prompt Engineering', 'Databricks Mosaic AI', 'ai_query()'],
+  },
 ]
 
 export default function Skills() {

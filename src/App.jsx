@@ -2,14 +2,13 @@ import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
-import Projects from './components/Projects'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
-  // IntersectionObserver for scroll-triggered fade-in-up animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,8 +38,8 @@ export default function App() {
       <main>
         <Hero />
         <Skills />
-        <Projects />
         <Experience />
+        <Projects />
         <Education />
         <Contact />
       </main>

@@ -16,8 +16,8 @@ const educationData = [
   },
   {
     degree: 'Bachelor of Engineering in Information Technology',
-    institution: 'Fr. Conceicao Rodrigues College of Engineering',
-    year: 'June 2020',
+    institution: 'Mumbai University',
+    year: 'May 2020',
     coursework: [
       'Operating Systems',
       'Java Programming',
@@ -25,7 +25,6 @@ const educationData = [
       'SDLC',
       'Data Structures & Algorithms',
     ],
-    /* TODO: Replace with actual education details */
     description:
       'Four-year engineering program covering systems design, programming, and data management fundamentals. Coursework in DBMS and data structures laid the groundwork for ETL pipeline design and query optimization in later industry roles.',
   },

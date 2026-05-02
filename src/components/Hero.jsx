@@ -37,7 +37,7 @@ function useParticleCanvas(canvasRef) {
     const ctx = canvas.getContext('2d')
     let animationId
     let particles = []
-    const ACCENT = '201, 168, 76'
+    const ACCENT = '37, 99, 235'
     const PARTICLE_COUNT = 80
     const CONNECTION_DIST = 130
     const MOUSE_REPEL_DIST = 100
@@ -138,19 +138,19 @@ function useParticleCanvas(canvasRef) {
 }
 
 const TYPEWRITER_PHRASES = [
-  'Building ETL/ELT pipelines at scale.',
-  'Designing medallion lakehouse architectures.',
-  'Modelling data for analytics and BI.',
-  'Streaming data with Kafka and Spark.',
-  'Orchestrating pipelines on Azure & AWS.',
-  'Transforming raw data into business value.',
+  'Architecting medallion lakehouse pipelines.',
+  'Processing 3.5M+ daily records on Databricks.',
+  'Building dbt models & data contracts at scale.',
+  'Streaming millions of events with Kafka & Spark.',
+  'Cutting pipeline runtimes by 91% on Azure & AWS.',
+  'Transforming raw data into trusted business insights.',
 ]
 
 const stats = [
-  { number: '4+',  label: 'Years Experience' },
+  { number: '5+',  label: 'Years Experience' },
   { number: '3',   label: 'Industries Served' },
-  { number: '35%', label: 'Faster Reporting' },
-  { number: '50%', label: 'Pipeline Time Saved' },
+  { number: '98%', label: 'Faster Data Acquisition' },
+  { number: '20%', label: 'Compute Cost Saved' },
 ]
 
 export default function Hero() {
@@ -186,9 +186,9 @@ export default function Hero() {
 
           <div className="hero-cta">
             <a
-              href="#projects"
+              href="#experience"
               className="btn-primary"
-              onClick={(e) => handleCTAClick(e, '#projects')}
+              onClick={(e) => handleCTAClick(e, '#experience')}
               aria-label="View my work"
             >
               View My Work
@@ -216,7 +216,10 @@ export default function Hero() {
 
           <div className="hero-about-text">
             <p>
-              With 4+ years of experience building and optimizing pipelines across cloud platforms, I engineer data platforms that govern, scale, and power AI systems without breaking production. I write code like a software engineer — with CI/CD, unit testing, and Docker containerization, not just scripts that work on a laptop. I design cost-conscious architectures, treating compute spend as a business decision and choosing the right table formats like Delta Lake based on actual business needs rather than tech trends. I enforce semantic layers and data contracts so business logic is centralized, observable, and AI-ready, not buried in a reporting tool. If an AI agent is making automated decisions downstream, my platform ensures it's working with clean, well-defined, trustworthy data. I don't just move data. I build the infrastructure that makes intelligent, automated decisions possible.
+              Data Engineer with <strong>5+ years</strong> delivering measurable impact across <strong>pharma, fintech, and adtech</strong> — cutting pipeline runtimes by 91%, saving 20% in compute costs, and eliminating 3-day reporting lags.
+            </p>
+            <p>
+              I architect production-grade Lakehouse pipelines, dbt models, and data quality frameworks trusted by 10+ cross-functional teams across <strong>Azure Databricks, AWS, and Snowflake</strong>. I treat data contracts and schema validation as non-negotiable, not afterthoughts — so the business always works from a single, trusted source of truth.
             </p>
           </div>
 

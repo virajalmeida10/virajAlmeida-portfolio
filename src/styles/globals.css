@@ -6,18 +6,18 @@
    CSS CUSTOM PROPERTIES — DESIGN TOKENS
    ============================================================ */
 :root {
-  --color-bg: #080C14;
-  --color-bg-2: #0D1220;
-  --color-card: rgba(255, 255, 255, 0.04);
-  --color-card-hover: rgba(255, 255, 255, 0.07);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.2);
-  --color-accent: #C9A84C;
-  --color-accent-dim: rgba(201, 168, 76, 0.5);
-  --color-accent-glow: rgba(201, 168, 76, 0.1);
-  --color-text: #F0F4F8;
-  --color-text-2: #8896A8;
-  --color-text-3: #4A5568;
+  --color-bg: #F0F4F8;
+  --color-bg-2: #E4EAF3;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F5F8FF;
+  --color-border: rgba(15, 23, 42, 0.1);
+  --color-border-hover: rgba(37, 99, 235, 0.35);
+  --color-accent: #2563EB;
+  --color-accent-dim: rgba(37, 99, 235, 0.5);
+  --color-accent-glow: rgba(37, 99, 235, 0.1);
+  --color-text: #0F172A;
+  --color-text-2: #475569;
+  --color-text-3: #94A3B8;
   --font-mono: 'Space Mono', monospace;
   --font-body: 'Inter', system-ui, sans-serif;
   --transition-base: 0.3s ease;
@@ -46,7 +46,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.7;
   overflow-x: hidden;
-  background-image: radial-gradient(circle, rgba(201, 168, 76, 0.035) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -99,15 +99,14 @@ button {
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07), 0 4px 12px rgba(15, 23, 42, 0.05);
   transition: background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .glass-card:hover {
   background: var(--color-card-hover);
-  border-color: rgba(201, 168, 76, 0.3);
-  box-shadow: 0 0 30px rgba(201, 168, 76, 0.12), 0 20px 60px rgba(0, 0, 0, 0.4);
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12), 0 2px 8px rgba(15, 23, 42, 0.06);
   transform: translateY(-4px);
 }
 
@@ -159,7 +158,7 @@ button {
   gap: 0.5rem;
   padding: 0.875rem 2rem;
   background: var(--color-accent);
-  color: #080C14;
+  color: #FFFFFF;
   font-family: var(--font-mono);
   font-size: 0.875rem;
   font-weight: 700;
@@ -180,7 +179,7 @@ button {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35), 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35), 0 8px 25px rgba(37, 99, 235, 0.12);
   transform: translateY(-2px);
 }
 
@@ -207,7 +206,7 @@ button {
 .btn-secondary:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
-  background: rgba(201, 168, 76, 0.05);
+  background: rgba(37, 99, 235, 0.05);
   transform: translateY(-2px);
 }
 
@@ -225,11 +224,12 @@ button {
 }
 
 .navbar.scrolled {
-  background: rgba(8, 12, 20, 0.92);
+  background: rgba(240, 244, 248, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--color-border);
   padding: 0.75rem 0;
+  box-shadow: 0 1px 12px rgba(15, 23, 42, 0.08);
 }
 
 .navbar-inner {
@@ -332,7 +332,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background: rgba(8, 12, 20, 0.97);
+  background: rgba(240, 244, 248, 0.98);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   display: flex;
@@ -381,7 +381,7 @@ button {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(160deg, #0D1220 0%, #080C14 60%, #060A10 100%);
+  background: linear-gradient(160deg, #EFF6FF 0%, #F0F4F8 55%, #E8EDF8 100%);
 }
 
 .hero-canvas {
@@ -460,7 +460,8 @@ button {
 }
 
 .stat-card:hover {
-  border-color: rgba(201, 168, 76, 0.25);
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
 }
 
 .stat-number {
@@ -484,8 +485,8 @@ button {
   align-items: center;
   gap: 0.5rem;
   padding: 0.375rem 1rem;
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 100px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -659,9 +660,9 @@ button {
 }
 
 .stat-card:hover {
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(37, 99, 235, 0.3);
   background: var(--color-card-hover);
-  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.1);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
 }
 
 .stat-number {
@@ -720,7 +721,7 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: var(--color-bg-2);
+  background: var(--color-card);
   border: 4px solid var(--color-bg);
   display: flex;
   align-items: center;
@@ -742,7 +743,7 @@ button {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -821,7 +822,7 @@ button {
   border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--color-card);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
 }
 
 .skills-row {
@@ -862,8 +863,8 @@ button {
   display: inline-flex;
   align-items: center;
   padding: 0.3rem 0.85rem;
-  background: rgba(201, 168, 76, 0.05);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   border-radius: 100px;
   font-size: 0.8rem;
   color: var(--color-text-2);
@@ -872,8 +873,8 @@ button {
 }
 
 .skill-pill:hover {
-  background: rgba(201, 168, 76, 0.12);
-  border-color: rgba(201, 168, 76, 0.35);
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.35);
   color: var(--color-text);
 }
 
@@ -916,7 +917,7 @@ button {
 }
 
 .project-card-full:hover {
-  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.1), 0 8px 30px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1), 0 8px 30px rgba(0,0,0,0.07);
 }
 
 .project-card-full__header {
@@ -931,8 +932,8 @@ button {
 .featured-badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 100px;
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -962,7 +963,7 @@ button {
 .project-diagram-wrapper {
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(15, 23, 42, 0.02);
   padding: 1.5rem 2.5rem;
   overflow: hidden;
 }
@@ -1001,8 +1002,8 @@ button {
 .project-description-block code {
   font-family: var(--font-mono);
   font-size: 0.85em;
-  background: rgba(201, 168, 76, 0.07);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   padding: 0.1em 0.4em;
   border-radius: 4px;
   color: var(--color-accent);
@@ -1088,8 +1089,8 @@ button {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--color-accent);
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.18);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
   border-radius: 4px;
   padding: 0.1em 0.45em;
   letter-spacing: 0.05em;
@@ -1113,9 +1114,9 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(15, 23, 42, 0.025);
   border: 1px solid var(--color-border);
-  border-left: 2px solid rgba(201, 168, 76, 0.35);
+  border-left: 2px solid rgba(37, 99, 235, 0.35);
   border-radius: 6px;
   padding: 0.55rem 0.875rem;
   font-size: 0.83rem;
@@ -1151,8 +1152,8 @@ button {
   font-size: 0.65rem;
   font-weight: 700;
   color: var(--color-accent);
-  background: rgba(201, 168, 76, 0.07);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 4px;
   padding: 0.2em 0.4em;
   letter-spacing: 0.05em;
@@ -1210,7 +1211,7 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(15, 23, 42, 0.025);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 0.875rem 1rem;
@@ -1218,15 +1219,15 @@ button {
 }
 
 .proj-outcome-item:hover {
-  border-color: rgba(201, 168, 76, 0.2);
+  border-color: rgba(37, 99, 235, 0.2);
 }
 
 .proj-outcome-check {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-accent);
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 50%;
   width: 1.4em;
   height: 1.4em;
@@ -1267,7 +1268,7 @@ button {
 }
 
 .proj-why-item:has(.proj-why-header.open) {
-  border-color: rgba(201, 168, 76, 0.25);
+  border-color: rgba(37, 99, 235, 0.25);
 }
 
 .proj-why-header {
@@ -1286,7 +1287,7 @@ button {
 
 .proj-why-header:hover,
 .proj-why-header.open {
-  background: rgba(201, 168, 76, 0.04);
+  background: rgba(37, 99, 235, 0.04);
 }
 
 .proj-why-tool {
@@ -1294,8 +1295,8 @@ button {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--color-accent);
-  background: rgba(201, 168, 76, 0.07);
-  border: 1px solid rgba(201, 168, 76, 0.18);
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(37, 99, 235, 0.18);
   border-radius: 4px;
   padding: 0.15em 0.55em;
   letter-spacing: 0.04em;
@@ -1313,7 +1314,7 @@ button {
 .proj-why-body {
   padding: 0 1.125rem 1rem;
   border-top: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(15, 23, 42, 0.02);
 }
 
 .proj-why-body p {
@@ -1373,14 +1374,14 @@ button {
   border-radius: var(--radius-card);
   padding: 2rem 2.25rem;
   transition: all var(--transition-base);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
 }
 
 .exp-card:hover {
   background: var(--color-card-hover);
-  border-color: rgba(201, 168, 76, 0.35);
+  border-color: rgba(37, 99, 235, 0.3);
   border-left-color: var(--color-accent);
-  box-shadow: 0 0 30px rgba(201, 168, 76, 0.08), 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12), 0 2px 8px rgba(15, 23, 42, 0.06);
   transform: translateX(4px);
 }
 
@@ -1460,7 +1461,7 @@ button {
 .exp-role-block--secondary {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px dashed rgba(201, 168, 76, 0.15);
+  border-top: 1px dashed rgba(37, 99, 235, 0.15);
 }
 
 .exp-role-title {
@@ -1523,7 +1524,7 @@ button {
    ============================================================ */
 .ai-section {
   padding: 7rem 2rem;
-  background: linear-gradient(135deg, #0D1220 0%, #080C14 50%, #060A10 100%);
+  background: var(--color-bg-2);
   position: relative;
   overflow: hidden;
 }
@@ -1536,7 +1537,7 @@ button {
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -1589,15 +1590,15 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
   opacity: 0;
   transition: opacity var(--transition-base);
 }
 
 .ai-card:hover {
   background: var(--color-card-hover);
-  border-color: rgba(201, 168, 76, 0.3);
-  box-shadow: 0 0 30px rgba(201, 168, 76, 0.12), 0 10px 30px rgba(0, 0, 0, 0.07);
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.12), 0 10px 30px rgba(0, 0, 0, 0.07);
   transform: translateY(-4px);
 }
 
@@ -1679,11 +1680,11 @@ button {
 .project-card:hover {
   background: var(--color-card-hover);
   transform: translateY(-6px);
-  box-shadow: 0 0 40px rgba(201, 168, 76, 0.15), 0 12px 36px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.15), 0 12px 36px rgba(0, 0, 0, 0.08);
 }
 
 .project-card:hover::after {
-  border-color: rgba(201, 168, 76, 0.35);
+  border-color: rgba(37, 99, 235, 0.35);
 }
 
 .project-card-header {
@@ -1697,8 +1698,8 @@ button {
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.625rem;
-  background: rgba(201, 168, 76, 0.1);
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 0.65rem;
@@ -1720,7 +1721,7 @@ button {
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 23, 42, 0.04);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   color: var(--color-text-2);
@@ -1729,8 +1730,8 @@ button {
 }
 
 .project-link-btn:hover {
-  background: rgba(201, 168, 76, 0.1);
-  border-color: rgba(201, 168, 76, 0.3);
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
   color: var(--color-accent);
 }
 
@@ -1768,7 +1769,7 @@ button {
   align-items: center;
   gap: 0.25rem;
   padding: 0.2rem 0.625rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.03);
   border: 1px solid var(--color-border);
   border-radius: 4px;
   font-size: 0.7rem;
@@ -1778,7 +1779,7 @@ button {
 }
 
 .project-card:hover .project-tag {
-  border-color: rgba(201, 168, 76, 0.15);
+  border-color: rgba(37, 99, 235, 0.15);
   color: var(--color-text-2);
 }
 
@@ -1819,8 +1820,8 @@ button {
 
 .industry-tile:hover {
   background: var(--color-card-hover);
-  border-color: rgba(201, 168, 76, 0.25);
-  box-shadow: 0 0 25px rgba(201, 168, 76, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
   transform: translateY(-3px);
 }
 
@@ -1880,13 +1881,14 @@ button {
   border-radius: var(--radius-card);
   padding: 2rem;
   transition: all var(--transition-base);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
 }
 
 .edu-card:hover {
   background: var(--color-card-hover);
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(37, 99, 235, 0.3);
   border-left-color: var(--color-accent);
-  box-shadow: 0 0 25px rgba(201, 168, 76, 0.1), 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1), 0 2px 6px rgba(15, 23, 42, 0.06);
   transform: translateY(-3px);
 }
 
@@ -1930,8 +1932,8 @@ button {
 
 .edu-course-tag {
   padding: 0.2rem 0.625rem;
-  background: rgba(201, 168, 76, 0.05);
-  border: 1px solid rgba(201, 168, 76, 0.12);
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.12);
   border-radius: 4px;
   font-size: 0.75rem;
   color: var(--color-text-2);
@@ -1962,7 +1964,7 @@ button {
   transform: translate(-50%, -50%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.04) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.04) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -2007,21 +2009,21 @@ button {
   gap: 1rem;
   padding: 1.1rem 2.5rem;
   background: var(--color-accent);
-  color: #080C14;
+  color: #FFFFFF;
   border-radius: 100px;
   font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: all 0.25s ease;
-  box-shadow: 0 0 0 0 rgba(201, 168, 76, 0);
+  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
   text-decoration: none;
 }
 
 .contact-email-btn:hover {
-  background: #d4b456;
+  background: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 8px 40px rgba(201, 168, 76, 0.35), 0 0 0 6px rgba(201, 168, 76, 0.08);
+  box-shadow: 0 8px 40px rgba(37, 99, 235, 0.35), 0 0 0 6px rgba(37, 99, 235, 0.1);
 }
 
 .contact-email-btn:active {
@@ -2080,9 +2082,9 @@ button {
 
 .contact-card:hover {
   background: var(--color-card-hover);
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(37, 99, 235, 0.3);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25), 0 0 20px rgba(201, 168, 76, 0.06);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12), 0 2px 6px rgba(15, 23, 42, 0.06);
 }
 
 .contact-card__icon {
@@ -2091,8 +2093,8 @@ button {
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  background: rgba(201, 168, 76, 0.07);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   border-radius: 50%;
   color: var(--color-accent);
   flex-shrink: 0;
@@ -2156,7 +2158,7 @@ button {
 .footer {
   border-top: 1px solid var(--color-border);
   padding: 2rem;
-  background: var(--color-bg);
+  background: var(--color-bg-2);
 }
 
 .footer-inner {
@@ -2356,9 +2358,9 @@ button {
 
 .footer-social-link:hover {
   color: var(--color-accent);
-  border-color: rgba(201, 168, 76, 0.3);
-  background: rgba(201, 168, 76, 0.06);
-  box-shadow: 0 0 12px rgba(201, 168, 76, 0.15);
+  border-color: rgba(37, 99, 235, 0.3);
+  background: rgba(37, 99, 235, 0.06);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.15);
 }
 
 @media (max-width: 640px) {
@@ -2372,8 +2374,8 @@ button {
    ============================================================ */
 .case-study-card {
   margin-top: 4rem;
-  background: rgba(201, 168, 76, 0.03);
-  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: rgba(37, 99, 235, 0.03);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   border-left: 3px solid var(--color-accent);
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -2382,14 +2384,14 @@ button {
 }
 
 @keyframes case-study-glow {
-  from { box-shadow: 0 0 20px rgba(201, 168, 76, 0.05); }
-  to   { box-shadow: 0 0 40px rgba(201, 168, 76, 0.12); }
+  from { box-shadow: 0 0 20px rgba(37, 99, 235, 0.05); }
+  to   { box-shadow: 0 0 40px rgba(37, 99, 235, 0.12); }
 }
 
 .case-study-header {
   padding: 1.75rem 2rem 1.25rem;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-  background: rgba(201, 168, 76, 0.04);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+  background: rgba(37, 99, 235, 0.04);
 }
 
 .case-study-title-row {
@@ -2413,7 +2415,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--color-text-3);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 23, 42, 0.04);
   border: 1px solid var(--color-border);
   padding: 0.2rem 0.625rem;
   border-radius: 100px;

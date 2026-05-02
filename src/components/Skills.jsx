@@ -1,23 +1,31 @@
 const skillGroups = [
   {
-    title: 'Programming',
-    skills: ['Python', 'PySpark', 'Java', 'JavaScript', 'REST APIs', 'HTML', 'CSS'],
+    title: 'Programming Languages',
+    skills: ['Python', 'PySpark', 'Pandas', 'SQL'],
   },
   {
-    title: 'Databases & Distributed Systems',
-    skills: ['SQL', 'Apache Spark', 'Hive', 'Kafka', 'PostgreSQL', 'MS SQL Server'],
+    title: 'Big Data, Streaming & DB',
+    skills: ['Apache Spark', 'Databricks', 'Kafka', 'Delta Lake'],
   },
   {
     title: 'Cloud & Platforms',
-    skills: ['Microsoft Azure', 'Databricks', 'AWS', 'Azure Data Factory', 'Snowflake'],
+    skills: ['Microsoft Azure (ADF, ADLS Gen2)', 'AWS (Lambda, S3, Redshift)', 'GCP (BigQuery)', 'Snowflake'],
   },
   {
-    title: 'Data Engineering & Analytics',
-    skills: ['ETL/ELT Pipelines', 'Data Modelling', 'PowerBI', 'Tableau'],
+    title: 'Data Engineering',
+    skills: ['ETL/ELT Pipelines', 'Batch & Real-Time Processing', 'Data Modeling', 'Data Warehouse', 'Airflow', 'dbt'],
   },
   {
-    title: 'AI & LLM Integration',
-    skills: ['Claude API', 'LLM Pipelines', 'Prompt Engineering', 'Databricks Mosaic AI', 'ai_query()'],
+    title: 'DevOps & Collaboration',
+    skills: ['Docker', 'Git', 'GitHub', 'CI/CD'],
+  },
+  {
+    title: 'Databases & Visualization',
+    skills: ['PostgreSQL', 'MySQL', 'Hive', 'Power BI'],
+  },
+  {
+    title: 'Data Governance & Quality',
+    skills: ['Data Contracts', 'Data Lineage', 'Schema Validation', 'HIPAA', 'GxP', 'Audit Logging'],
   },
 ]
 
@@ -29,7 +37,7 @@ export default function Skills() {
           <span className="section-label">What I Work With</span>
           <h2 className="section-title">Skills &amp; Technologies</h2>
           <p className="section-subtitle">
-            A curated toolkit built across 4+ years of production data engineering, enterprise software, and analytics work.
+            A battle-tested toolkit built across 5+ years of production data engineering in pharma, fintech, and adtech.
           </p>
         </div>
 

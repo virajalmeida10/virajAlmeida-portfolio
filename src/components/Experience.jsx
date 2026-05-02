@@ -1,26 +1,19 @@
 const experiences = [
   {
-    company: 'Daiichi Sankyo Inc.',
-    via: 'Via Relevance Lab',
-    period: 'June 2024 – Present',
+    company: 'Relevance Lab',
+    via: 'Consulting Client: Daiichi Sankyo Inc.',
+    period: 'June 2024 – March 2026',
     location: 'Basking Ridge, NJ',
-    department: 'Azure Databricks · Azure Synapse · ADF · AWS Lambda',
+    department: 'Azure Databricks · ADF · Snowflake · AWS Lambda · dbt',
     roles: [
       {
         title: 'Data Engineer',
         bullets: [
-          'Engineered weekly feature engineering pipelines on Azure Databricks, processing clinical trial records through demographic joins & time-based transformations cutting time-to-model by 60% & accelerating downstream delivery.',
-          'Architected HIPAA-compliant star schema models on Azure Synapse Analytics, consolidating regional healthcare datasets via ADF with RBAC and partition-level access controls enabling audit-ready clinical reporting.',
-          'Designed and owned end-to-end ADF pipeline workflows across clinical and business domains, implementing dependency management, scheduling and automated retry logic, maintaining zero SLA breaches across production.',
-          'Optimized Azure Synapse pipelines and SQL queries for clinical trial and pharma sales data restructuring table partitions, rewriting slow queries, eliminating redundant joins, and automating manual processes to reduce data processing time by 35% and query runtime by 40%.',
-        ],
-      },
-      {
-        title: 'Data Engineering Intern (Direct Hire)',
-        bullets: [
-          'Built a serverless AWS Lambda pipeline automating real-time data extraction from EDGAR, USPTO, and Tavily APIs, reducing data acquisition time from 2 hours to 8 minutes for the data intelligence team.',
-          'Implemented a Python-based data quality framework at the bronze layer, detecting schema anomalies, null values, and outliers before ADLS ingestion, eliminating silent data corruption from downstream reporting.',
-          'Optimized SQL queries on Azure Synapse Analytics processing millions of daily records rewriting inefficient joins, adding targeted indexes, and removing redundant aggregations to cut query runtime by 40%.',
+          'Architected an Azure Databricks medallion lakehouse unifying relational, CRM, and file-based sources via incremental ADF pipelines — cutting data latency from 30 days to 24 hours and enabling sales, territory, and commercial reporting for 5+ cross-functional teams.',
+          'Enforced data contracts via dbt and PySpark validation across Bronze/Silver/Gold layers, intercepting 5,000+ bad records monthly and eliminating downstream reporting failures across all production datasets.',
+          'Optimized Spark pipelines on Databricks with tuned partitioning, cluster sizing, and Parquet I/O — processing 3.5M+ daily records with 3x throughput improvement, 30% runtime reduction, and 20% compute cost savings.',
+          'Slashed pharmacovigilance data acquisition from 5 hours to 8 minutes (98% faster) by building a serverless AWS Lambda pipeline parallelizing 3 external APIs, directly unblocking the data science team\'s modeling pipeline.',
+          'Designed audit-ready staging and mart-layer SQL models on Snowflake in version-controlled SQL, powering Power BI dashboards via daily scheduled runs and eliminating a 3-day reporting lag for 3+ business teams.',
         ],
       },
     ],
@@ -28,17 +21,33 @@ const experiences = [
   {
     company: 'Media.Net Software Services',
     via: null,
-    period: 'April 2021 – Aug 2023',
-    location: 'Mumbai, IN',
-    department: 'SQL · Apache Spark · Hive · ETL Pipeline',
+    period: 'April 2021 – August 2023',
+    location: 'Mumbai, MH',
+    department: 'Apache Kafka · Spark Streaming · Airflow · PySpark · SQL · Hive',
     roles: [
       {
         title: 'Data Engineer',
         bullets: [
-          'Built and maintained Apache Spark pipelines processing millions of daily ad events across premium publisher networks delivering clean, structured data to analytics teams and internal reporting dashboards.',
-          'Engineered large-scale data transformation workflows using Spark and Hive on daily ad events in a high-volume programmatic ads environment supporting real-time bidding analytics and publisher performance reporting.',
-          'Deployed and maintained Druid-based OLAP platform for real-time ad analytics enabling sub-second query performance on millions of ad events and reducing reporting latency for internal teams.',
-          'Implemented data quality validation checks on structured and semi-structured ad event data detecting anomalies, ensuring accuracy across downstream reporting pipelines supporting premium publisher & advertiser analytics.',
+          'Engineered event-driven Kafka, Spark Streaming, and Airflow pipelines ingesting millions of ad events daily — accelerating campaign performance reporting across cross-functional teams through stakeholder-facing analytics dashboards.',
+          'Processed publisher PDFs and images using PySpark, extracting unstructured data and classifying text content to enrich contextual ad targeting pipelines, improving ad relevance by 25% across publisher inventory.',
+          'Identified and resolved 35+ critical pipeline failures through systematic SQL auditing and monitoring — restoring data accuracy within hours and maintaining 99%+ reporting reliability across all production pipelines.',
+          'Unified MySQL and Hive data sources via Python and SQL transformations, building a single reporting layer that eliminated manual reconciliation for 3 cross-functional teams and reduced reporting preparation time by 16 hours weekly.',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'EbixCash Financial Technologies',
+    via: null,
+    period: 'May 2020 – April 2021',
+    location: 'Mumbai, MH',
+    department: 'Python · SQL · Apache Airflow · ETL',
+    roles: [
+      {
+        title: 'ETL Developer',
+        bullets: [
+          'Developed Python and SQL ETL pipelines consolidating credit records, transaction patterns, and threat intelligence across 3 business lines and 4+ source systems — strengthening fraud detection coverage across a $4B+ payment exchange network.',
+          'Automated hourly fraud detection workflows in Apache Airflow monitoring 500K+ daily transactions across remittance, forex, and insurance streams — cutting fraud signal latency from 24 hours to under 1 hour and enabling same-day analyst response.',
         ],
       },
     ],
@@ -51,7 +60,6 @@ function ExperienceCard({ experience, index }) {
       className={`exp-card fade-in-up delay-${(index % 3) + 1}`}
       aria-label={`${experience.company}`}
     >
-      {/* Company header */}
       <div className="exp-card-top">
         <div className="exp-card-top-left">
           <div className="exp-company">{experience.company}</div>
@@ -67,7 +75,6 @@ function ExperienceCard({ experience, index }) {
         <div className="exp-dept">{experience.department}</div>
       </div>
 
-      {/* Roles */}
       <div className="exp-roles">
         {experience.roles.map((role, i) => (
           <div key={role.title} className={`exp-role-block${i > 0 ? ' exp-role-block--secondary' : ''}`}>
@@ -94,7 +101,7 @@ export default function Experience() {
         <span className="section-label">Career</span>
         <h2 className="section-title">Work Experience</h2>
         <p className="section-subtitle">
-          4+ years building data infrastructure across healthcare, pharma, and ad tech — from ingestion to insights.
+          5+ years building data infrastructure across pharma, fintech, and adtech — from ingestion to executive insights.
         </p>
       </div>
 

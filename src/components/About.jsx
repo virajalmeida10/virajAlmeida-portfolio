@@ -1,8 +1,8 @@
 const stats = [
-  { number: '4+', label: 'Years Experience' },
+  { number: '5+', label: 'Years Experience' },
   { number: '3', label: 'Industries Served' },
-  { number: '60%', label: 'Effort Reduced' },
-  { number: '50%', label: 'Pipeline Time Saved' },
+  { number: '5K+', label: 'Bad Records Intercepted/Mo' },
+  { number: '3.5M+', label: 'Daily Records Processed' },
 ]
 
 export default function About() {
@@ -18,21 +18,20 @@ export default function About() {
         <div>
           <div className="about-bio fade-in-up delay-1">
             <p>
-              I'm a Data Engineer with 4+ years of experience designing end-to-end pipelines,
-              lakehouse architectures, and intelligent automation systems. I specialize in
-              translating complex business requirements into scalable, measurable data
-              infrastructure — from real-time KPI dashboards to agentic AI workflows.
+              I'm a Data Engineer with 5+ years delivering measurable business impact across
+              pharma, fintech, and adtech. I specialize in architecting production-grade
+              Lakehouse pipelines, dbt models, and data quality frameworks trusted by
+              10+ cross-functional teams.
             </p>
             <p>
-              My career spans healthcare IT, pharmaceutical enterprise systems, and ad tech —
-              giving me a unique perspective on data challenges across industries. Whether
-              it's modernizing legacy pipelines, reducing operational costs, or building
-              AI-assisted data products, I bring both technical depth and business context
-              to every engagement.
+              Whether it's enforcing HIPAA-compliant data contracts on Azure Databricks,
+              building serverless AWS Lambda pipelines that slash acquisition time by 98%,
+              or designing Snowflake mart-layer models that eliminate multi-day reporting lags
+              — I bring both technical precision and a business-outcomes mindset to every engagement.
             </p>
             <p>
-              I'm driven by the belief that clean, well-architected data is the foundation
-              of every great product decision.
+              Clean, well-architected data isn't just infrastructure. It's the foundation
+              every great product decision is built on.
             </p>
           </div>
 

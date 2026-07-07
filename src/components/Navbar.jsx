@@ -4,8 +4,9 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Case Studies', href: '#case-studies' },
   { label: 'Education', href: '#education' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -55,7 +56,7 @@ export default function Navbar() {
             aria-label="Viraj Almeida — go to top"
             onClick={(e) => handleNavClick(e, '#hero')}
           >
-            &gt; Viraj_Almeida_
+            Viraj Almeida
           </a>
 
           {/* Desktop nav links */}

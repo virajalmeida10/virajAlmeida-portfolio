@@ -37,7 +37,7 @@ function useParticleCanvas(canvasRef) {
     const ctx = canvas.getContext('2d')
     let animationId
     let particles = []
-    const ACCENT = '37, 99, 235'
+    const ACCENT = '13, 148, 136'
     const PARTICLE_COUNT = 80
     const CONNECTION_DIST = 130
     const MOUSE_REPEL_DIST = 100
@@ -138,19 +138,19 @@ function useParticleCanvas(canvasRef) {
 }
 
 const TYPEWRITER_PHRASES = [
-  'Architecting medallion lakehouse pipelines.',
-  'Processing 3.5M+ daily records on Databricks.',
-  'Building dbt models & data contracts at scale.',
-  'Streaming millions of events with Kafka & Spark.',
-  'Cutting pipeline runtimes by 91% on Azure & AWS.',
-  'Transforming raw data into trusted business insights.',
+  'Validating controls across Salesforce, SAP CPI & Liferay DXP.',
+  'Running risk-based testing through SIT & UAT cycles.',
+  'Root-causing SAP master-data & control exceptions.',
+  'Tracking remediation from control gap to closure.',
+  'Applying GenAI literacy to modern audit workflows.',
+  'Turning SQL-driven audits into Tableau-ready insight.',
 ]
 
 const stats = [
-  { number: '5+',  label: 'Years Experience' },
-  { number: '3',   label: 'Industries Served' },
-  { number: '98%', label: 'Faster Data Acquisition' },
-  { number: '20%', label: 'Compute Cost Saved' },
+  { number: '4+',  label: 'Years in IT Audit' },
+  { number: '6',   label: 'Enterprise Systems Audited' },
+  { number: '2',   label: 'Industries Served' },
+  { number: 'MS',  label: 'Information Systems, Pace' },
 ]
 
 export default function Hero() {
@@ -177,7 +177,7 @@ export default function Hero() {
             <span>Almeida</span>
           </h1>
 
-          <p className="hero-role">Data Engineer</p>
+          <p className="hero-role">IT Audit, Risk &amp; Compliance</p>
 
           <div className="hero-typewriter" aria-live="polite" aria-label="Dynamic specialisation">
             <span>{typewriterText}</span>
@@ -216,10 +216,10 @@ export default function Hero() {
 
           <div className="hero-about-text">
             <p>
-              Data Engineer with <strong>5+ years</strong> delivering measurable impact across <strong>pharma, fintech, and adtech</strong> — cutting pipeline runtimes by 91%, saving 20% in compute costs, and eliminating 3-day reporting lags.
+              IT Audit, Risk &amp; Compliance professional with hands-on experience validating controls, running risk-based testing, and assessing compliance across <strong>ERP (SAP), CRM (Salesforce), and case management systems</strong>. I partner with Compliance, Regulatory Affairs, and IT stakeholders to close control gaps and keep the change lifecycle audit-ready.
             </p>
             <p>
-              I architect production-grade Lakehouse pipelines, dbt models, and data quality frameworks trusted by 10+ cross-functional teams across <strong>Azure Databricks, AWS, and Snowflake</strong>. I treat data contracts and schema validation as non-negotiable, not afterthoughts — so the business always works from a single, trusted source of truth.
+              My background spans <strong>SIT/UAT risk-based testing, SAP master-data reconciliation, and SQL-driven data validation</strong> — increasingly paired with GenAI-literate audit practices, from LLM risk awareness to prompt-assisted control documentation. MS in Information Systems, with SQL and Tableau as daily tools for turning audit evidence into decisions.
             </p>
           </div>
 

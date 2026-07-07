@@ -1,31 +1,31 @@
 const skillGroups = [
   {
-    title: 'Programming Languages',
-    skills: ['Python', 'PySpark', 'Pandas', 'SQL'],
+    title: 'Audit & Compliance',
+    skills: ['Risk-Based Audit Planning', 'Control Testing', 'IT General Controls (ITGC)', 'SOX-Aligned Governance', 'Data Protection & Anonymization', 'Regulatory Compliance', 'Access Control Reviews'],
   },
   {
-    title: 'Big Data, Streaming & DB',
-    skills: ['Apache Spark', 'Databricks', 'Kafka', 'Delta Lake'],
+    title: 'Systems Audited',
+    skills: ['Salesforce', 'SAP CPI', 'Oracle/SQL Databases', 'Liferay DXP', 'Appian', 'Case Management'],
   },
   {
-    title: 'Cloud & Platforms',
-    skills: ['Microsoft Azure (ADF, ADLS Gen2)', 'AWS (Lambda, S3, Redshift)', 'GCP (BigQuery)', 'Snowflake'],
+    title: 'Data & Analytics',
+    skills: ['SQL', 'SQL Stored Procedures', 'Data Validation & Reconciliation', 'Tableau', 'Reporting & Dashboards'],
   },
   {
-    title: 'Data Engineering',
-    skills: ['ETL/ELT Pipelines', 'Batch & Real-Time Processing', 'Data Modeling', 'Data Warehouse', 'Airflow', 'dbt'],
+    title: 'Technical & Change Management',
+    skills: ['REST API Integrations', 'OSGi Modules', 'Windows & Linux Environments', 'Change/Release Management'],
   },
   {
-    title: 'DevOps & Collaboration',
-    skills: ['Docker', 'Git', 'GitHub', 'CI/CD'],
+    title: 'AI Domain Knowledge',
+    skills: ['GenAI-Assisted Control Testing Awareness', 'LLM Risk & Governance Literacy', 'Prompt Engineering for Audit Automation', 'AI Use-Case Risk Assessment'],
   },
   {
-    title: 'Databases & Visualization',
-    skills: ['PostgreSQL', 'MySQL', 'Hive', 'Power BI'],
+    title: 'Tools & Platforms',
+    skills: ['Microsoft Excel', 'Word', 'PowerPoint', 'Teams', 'Visio'],
   },
   {
-    title: 'Data Governance & Quality',
-    skills: ['Data Contracts', 'Data Lineage', 'Schema Validation', 'HIPAA', 'GxP', 'Audit Logging'],
+    title: 'Soft Skills',
+    skills: ['Written & Verbal Communication', 'Cross-Functional Stakeholder Collaboration', 'Multi-Tasking', 'Attention to Detail', 'Team Orientation'],
   },
 ]
 
@@ -37,7 +37,7 @@ export default function Skills() {
           <span className="section-label">What I Work With</span>
           <h2 className="section-title">Skills &amp; Technologies</h2>
           <p className="section-subtitle">
-            A battle-tested toolkit built across 5+ years of production data engineering in pharma, fintech, and adtech.
+            A field-tested toolkit spanning ERP/CRM control validation, SQL-driven compliance reporting, and GenAI-aware audit practices.
           </p>
         </div>
 

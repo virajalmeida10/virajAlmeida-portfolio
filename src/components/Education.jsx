@@ -2,7 +2,7 @@ const educationData = [
   {
     degree: 'Master of Science in Information Systems',
     institution: 'Pace University',
-    year: 'May 2025',
+    year: 'September 2023 – May 2025',
     coursework: [
       'Cloud Computing',
       'Infrastructure Security',
@@ -10,9 +10,8 @@ const educationData = [
       'Data Analytics',
       'Enterprise Architecture',
     ],
-    /* TODO: Replace with actual education details */
     description:
-      'Focused on cloud architecture, data management, and enterprise-scale system design. Built the architectural foundation for production-grade data platforms through coursework in distributed computing, secure system design, and advanced database engineering.',
+      'Graduate coursework in cloud computing, infrastructure security, database design, and enterprise architecture — building the analytical and systems foundation for IT audit, risk assessment, and controls work across ERP and CRM platforms.',
   },
   {
     degree: 'Bachelor of Engineering in Information Technology',
@@ -26,7 +25,7 @@ const educationData = [
       'Data Structures & Algorithms',
     ],
     description:
-      'Four-year engineering program covering systems design, programming, and data management fundamentals. Coursework in DBMS and data structures laid the groundwork for ETL pipeline design and query optimization in later industry roles.',
+      'Four-year engineering program covering systems design, programming, and data management fundamentals. Coursework in DBMS and SDLC laid the groundwork for control testing, data reconciliation, and audit evidence validation in later IT audit roles.',
   },
 ]
 
@@ -37,7 +36,7 @@ export default function Education() {
         <span className="section-label">Academic Background</span>
         <h2 className="section-title">Education</h2>
         <p className="section-subtitle">
-          Formal foundations in information systems and engineering — complemented by hands-on industry experience.
+          Formal foundations in information systems and engineering — complemented by hands-on IT audit and compliance experience.
         </p>
       </div>
 
@@ -53,7 +52,6 @@ export default function Education() {
             <div className="edu-institution">{edu.institution}</div>
             <div className="edu-year">{edu.year}</div>
 
-            {/* TODO: Replace with actual education details */}
             <p className="edu-description">{edu.description}</p>
 
             <div className="edu-coursework-label">Related Coursework</div>

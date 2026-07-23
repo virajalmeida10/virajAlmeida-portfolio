@@ -1,31 +1,23 @@
 const skillGroups = [
   {
-    title: 'Audit & Compliance',
-    skills: ['Risk-Based Audit Planning', 'Control Testing', 'IT General Controls (ITGC)', 'SOX-Aligned Governance', 'Data Protection & Anonymization', 'Regulatory Compliance', 'Access Control Reviews'],
+    title: 'Languages',
+    skills: ['Java', 'JavaScript', 'TypeScript', 'Golang', 'Python', 'PHP', 'SQL'],
   },
   {
-    title: 'Systems Audited',
-    skills: ['Salesforce', 'SAP CPI', 'Oracle/SQL Databases', 'Liferay DXP', 'Appian', 'Case Management'],
+    title: 'Databases',
+    skills: ['MSSQL', 'PostgreSQL', 'Redis', 'Vector Database', 'MinIO (S3-compatible)'],
   },
   {
-    title: 'Data & Analytics',
-    skills: ['SQL', 'SQL Stored Procedures', 'Data Validation & Reconciliation', 'Tableau', 'Reporting & Dashboards'],
+    title: 'Cloud & DevOps',
+    skills: ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'REST APIs', 'Microservices', 'Github'],
   },
   {
-    title: 'Technical & Change Management',
-    skills: ['REST API Integrations', 'OSGi Modules', 'Windows & Linux Environments', 'Change/Release Management'],
+    title: 'Libraries & Frameworks',
+    skills: ['Spring Boot', 'Spring Data JPA', 'Spring Security', 'Spring AI', 'React', 'Hibernate', 'Kafka'],
   },
   {
-    title: 'AI Domain Knowledge',
-    skills: ['GenAI-Assisted Control Testing Awareness', 'LLM Risk & Governance Literacy', 'Prompt Engineering for Audit Automation', 'AI Use-Case Risk Assessment'],
-  },
-  {
-    title: 'Tools & Platforms',
-    skills: ['Microsoft Excel', 'Word', 'PowerPoint', 'Teams', 'Visio'],
-  },
-  {
-    title: 'Soft Skills',
-    skills: ['Written & Verbal Communication', 'Cross-Functional Stakeholder Collaboration', 'Multi-Tasking', 'Attention to Detail', 'Team Orientation'],
+    title: 'Concepts & Practices',
+    skills: ['RAG', 'JWT/OAuth', 'SAGA & Outbox Patterns', 'Resilience4J', 'JUnit', 'Mockito', 'Git'],
   },
 ]
 
@@ -37,7 +29,7 @@ export default function Skills() {
           <span className="section-label">What I Work With</span>
           <h2 className="section-title">Skills &amp; Technologies</h2>
           <p className="section-subtitle">
-            A field-tested toolkit spanning ERP/CRM control validation, SQL-driven compliance reporting, and GenAI-aware audit practices.
+            A production-tested stack spanning backend microservices, distributed data systems, and full-stack AI-powered applications.
           </p>
         </div>
 

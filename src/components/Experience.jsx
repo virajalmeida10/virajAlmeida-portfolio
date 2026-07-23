@@ -1,20 +1,19 @@
 const experiences = [
   {
-    company: 'Relevance Lab',
-    via: 'Consulting Client: Daiichi Sankyo Inc.',
+    company: 'Daiichi Sankyo',
+    via: null,
     period: 'June 2024 – March 2026',
     location: 'Basking Ridge, NJ',
-    department: 'Salesforce · SCIMAX · SAP CPI · Liferay DXP · Appian',
+    department: 'Spring Boot · Spring AI · Kubernetes · React/TypeScript',
     roles: [
       {
-        title: 'Associate Consultant – IT Audit',
+        title: 'Software Engineer',
         bullets: [
-          'Partnered with Compliance, Regulatory Affairs, and Pharmacovigilance teams to assess control risks across Salesforce, SCIMAX, and SAP CPI integrations supporting a Medical Information platform, ensuring adherence to data protection, privacy, and regulatory requirements throughout the change lifecycle.',
-          'Executed control validation and risk-based testing during SIT/UAT cycles for API integrations and data transformations, identifying control exceptions and documentation gaps, and tracking remediation status to closure with process owners.',
-          'Performed data mapping and reconciliation reviews for SAP master-data synchronization (cost centers, organizational units, financial master data), root-causing mapping failures and database schema discrepancies and coordinating corrective action with IT stakeholders.',
-          'Reviewed business requirements, functional specifications, and user stories against defined acceptance criteria to confirm system changes maintained compliance with internal governance, audit, and IT control standards.',
-          'Supported production release governance by validating QA sign-off, smoke testing, and post-deployment monitoring, ensuring change-management controls were satisfied prior to go-live on OSGi/Liferay DXP releases.',
-          'Documented process flows, data-mapping specifications, and API architecture used by audit and compliance stakeholders to evaluate control effectiveness across integrated enterprise systems (Liferay DXP, Appian workflow automation).',
+          'Delivered an enterprise RAG document-assistant chatbot end-to-end on Spring Boot and Spring AI, orchestrating a vector database with LLM APIs to resolve employee and vendor queries against internal documentation, shipped as an independently scalable microservice on Kubernetes.',
+          'Hardened the AI assistant with role-based access control by validating Liferay-issued JWTs and filtering restricted content at retrieval time, guaranteeing unauthorized documents never reached the model.',
+          'Built master-data sync for a 3,000+ user e-procurement platform via Java/OSGi on SAP APIs, JAXB parsing, Service Builder persistence to MSSQL, with scheduled delta/full loads keeping cost-center, department, and org data accurate.',
+          'Built a full-stack content publishing platform in React/TypeScript and Spring Boot: REST content-creation API, multipart image upload to S3/CDN, and a filterable responsive gallery UI spanning JPA schema to frontend.',
+          'Developed a custom MVC portlet on Liferay DXP for a regulated medical-access portal, adding JavaScript validation, secure uploads, reCAPTCHA, Service Builder persistence, and a Kaleo approval workflow with automated email alerts.',
         ],
       },
     ],
@@ -24,16 +23,16 @@ const experiences = [
     via: null,
     period: 'April 2021 – August 2023',
     location: 'Mumbai, MH',
-    department: 'Access Controls · SQL · Tableau · Compliance Audits',
+    department: 'Golang · Kafka · Redis · High-Throughput Ad Delivery',
     roles: [
       {
-        title: 'Associate',
+        title: 'Web Developer',
         bullets: [
-          'Spearheaded implementation of user access controls, meticulously aligning permissions for comprehensive monitoring and regulatory compliance, demonstrating working knowledge of authentication protocols and access-restriction best practices.',
-          'Orchestrated provisioning and de-provisioning processes for publisher accounts, incorporating rigorous database checks against audit standards and data-protection requirements, ensuring adherence to data anonymization protocols.',
-          'Collaborated with the Compliance team on recurring re-audits, building SQL stored procedures to execute, verify, and validate audit numbers, strengthening compliance tracking and reporting through systematic storage of results.',
-          'Analyzed publisher data and built visual audit/compliance reports in Tableau to support strategic, risk-informed decision-making on live ad products, while assessing profitability and market dynamics with product managers.',
-          'Demonstrated a strong aptitude for rapidly acquiring proficiency in emerging technologies and integrating them into customer-facing, controls-sensitive environments through close collaboration with product managers.',
+          'Ported a high-traffic ad-serving system (2.5k QPS) off PHP onto Golang, rewriting 30,000+ lines to achieve a 25% performance gain and 10% revenue lift, while lifting Go module test coverage from 30% to 75%.',
+          'Designed a multi-tier caching layer (in-process + Redis) paired with a Kafka-driven cache invalidation service, keeping data version-consistent across distributed service instances and removing stale-read issues in production ad delivery.',
+          'Drove development of lightweight JavaScript ad modules shipped to publisher pages under a 100ms execution budget, together with low-latency APIs returning ad payloads in both JSON and VAST XML formats.',
+          'Engineered the client-side JavaScript integration on publisher pages to consume those JSON and VAST XML payloads and render ad content within the same sub-100ms execution budget.',
+          'Created the Compact URL Service, cutting click-tracking URL length by 40–50% via binary-packed, encoded parameters that mask internal campaign identifiers without sacrificing redirect performance.',
         ],
       },
     ],
@@ -87,7 +86,7 @@ export default function Experience() {
         <span className="section-label">Career</span>
         <h2 className="section-title">Work Experience</h2>
         <p className="section-subtitle">
-          4+ years bridging IT audit, risk assessment, and regulatory compliance across pharma and digital media — validating controls from SIT/UAT through production go-live.
+          4+ years engineering AI-powered enterprise platforms, distributed backend systems, and high-throughput ad-tech infrastructure — from Spring AI microservices to Golang rewrites at scale.
         </p>
       </div>
 

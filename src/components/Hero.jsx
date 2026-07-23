@@ -138,19 +138,19 @@ function useParticleCanvas(canvasRef) {
 }
 
 const TYPEWRITER_PHRASES = [
-  'Validating controls across Salesforce, SAP CPI & Liferay DXP.',
-  'Running risk-based testing through SIT & UAT cycles.',
-  'Root-causing SAP master-data & control exceptions.',
-  'Tracking remediation from control gap to closure.',
-  'Applying GenAI literacy to modern audit workflows.',
-  'Turning SQL-driven audits into Tableau-ready insight.',
+  'Building enterprise RAG chatbots with Spring AI & vector search.',
+  'Rewriting legacy PHP into high-throughput Golang services.',
+  'Designing distributed systems with Kafka, Redis & Kubernetes.',
+  'Shipping full-stack platforms in React, TypeScript & Spring Boot.',
+  'Engineering PCI-compliant payment gateways at 10k TPS.',
+  'Streaming AI-generated code in real time over SSE.',
 ]
 
 const stats = [
-  { number: '4+',  label: 'Years in IT Audit' },
-  { number: '6',   label: 'Enterprise Systems Audited' },
-  { number: '2',   label: 'Industries Served' },
-  { number: 'MS',  label: 'Information Systems, Pace' },
+  { number: '4+',   label: 'Years Experience' },
+  { number: '10K+', label: 'Concurrent Sessions Served' },
+  { number: '25%',  label: 'Perf Gain from Go Rewrite' },
+  { number: 'MS',   label: 'Information Systems, Pace' },
 ]
 
 export default function Hero() {
@@ -177,7 +177,7 @@ export default function Hero() {
             <span>Almeida</span>
           </h1>
 
-          <p className="hero-role">IT Audit, Risk &amp; Compliance</p>
+          <p className="hero-role">Software Engineer</p>
 
           <div className="hero-typewriter" aria-live="polite" aria-label="Dynamic specialisation">
             <span>{typewriterText}</span>
@@ -216,10 +216,10 @@ export default function Hero() {
 
           <div className="hero-about-text">
             <p>
-              IT Audit, Risk &amp; Compliance professional with hands-on experience validating controls, running risk-based testing, and assessing compliance across <strong>ERP (SAP), CRM (Salesforce), and case management systems</strong>. I partner with Compliance, Regulatory Affairs, and IT stakeholders to close control gaps and keep the change lifecycle audit-ready.
+              Software Engineer with hands-on experience building <strong>AI-powered enterprise systems, distributed microservices, and full-stack platforms</strong> across pharma and ad-tech. I've shipped a RAG document-assistant chatbot on Spring Boot and Spring AI, hardened it with JWT-based role access control, and built SAP-integrated master-data sync pipelines for a 3,000+ user e-procurement platform.
             </p>
             <p>
-              My background spans <strong>SIT/UAT risk-based testing, SAP master-data reconciliation, and SQL-driven data validation</strong> — increasingly paired with GenAI-literate audit practices, from LLM risk awareness to prompt-assisted control documentation. MS in Information Systems, with SQL and Tableau as daily tools for turning audit evidence into decisions.
+              My background spans <strong>Golang, Java/Spring, React/TypeScript, Kafka, and Kubernetes</strong> — from rewriting a 2.5k QPS ad-serving system off PHP for a 25% performance gain, to designing multi-tier caching with Redis and Kafka-driven invalidation. MS in Information Systems from Pace University, with a builder's habit of shipping side projects in payments, generative AI, and data engineering.
             </p>
           </div>
 

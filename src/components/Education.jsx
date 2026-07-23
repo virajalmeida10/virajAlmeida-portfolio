@@ -11,21 +11,7 @@ const educationData = [
       'Enterprise Architecture',
     ],
     description:
-      'Graduate coursework in cloud computing, infrastructure security, database design, and enterprise architecture — building the analytical and systems foundation for IT audit, risk assessment, and controls work across ERP and CRM platforms.',
-  },
-  {
-    degree: 'Bachelor of Engineering in Information Technology',
-    institution: 'Mumbai University',
-    year: 'May 2020',
-    coursework: [
-      'Operating Systems',
-      'Java Programming',
-      'Database Management Systems',
-      'SDLC',
-      'Data Structures & Algorithms',
-    ],
-    description:
-      'Four-year engineering program covering systems design, programming, and data management fundamentals. Coursework in DBMS and SDLC laid the groundwork for control testing, data reconciliation, and audit evidence validation in later IT audit roles.',
+      'Graduate coursework in cloud computing, infrastructure security, database design, and enterprise architecture — building the systems foundation behind distributed backend design, secure API integration, and data-platform work in later engineering roles.',
   },
 ]
 
@@ -36,7 +22,7 @@ export default function Education() {
         <span className="section-label">Academic Background</span>
         <h2 className="section-title">Education</h2>
         <p className="section-subtitle">
-          Formal foundations in information systems and engineering — complemented by hands-on IT audit and compliance experience.
+          Formal foundations in information systems — complemented by hands-on experience building distributed backend systems and AI-powered platforms.
         </p>
       </div>
 

@@ -25,6 +25,14 @@ function LinkedInIcon() {
   )
 }
 
+function GitHubIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577 0-.285-.01-1.04-.016-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.305.762-1.605-2.665-.303-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.805 5.624-5.475 5.92.43.372.823 1.104.823 2.226 0 1.606-.015 2.902-.015 3.297 0 .32.192.694.8.576C20.565 21.797 24 17.298 24 12c0-6.63-5.373-12-12-12z" />
+    </svg>
+  )
+}
+
 const contactCards = [
   {
     icon: <PhoneIcon />,
@@ -40,6 +48,13 @@ const contactCards = [
     href: 'https://www.linkedin.com/in/viraj-almeida',
     external: true,
   },
+  {
+    icon: <GitHubIcon />,
+    label: 'GitHub',
+    value: '/virajalmeida10',
+    href: 'https://github.com/virajalmeida10',
+    external: true,
+  },
 ]
 
 export default function Contact() {
@@ -52,8 +67,8 @@ export default function Contact() {
           <span className="section-label">Get In Touch</span>
           <h2 className="section-title">Let's Connect</h2>
           <p className="contact-tagline">
-            Open to full-time IT Audit, Risk &amp; Compliance roles and control-testing engagements.
-            <br />Whether you're building out a SOX program, an ITGC framework, or an AI-era audit function — I'd love to hear from you.
+            Open to full-time Software Engineering roles across backend, full-stack, and AI-powered platforms.
+            <br />Whether you're building distributed systems, GenAI applications, or scaling a platform from zero — I'd love to hear from you.
           </p>
         </div>
 

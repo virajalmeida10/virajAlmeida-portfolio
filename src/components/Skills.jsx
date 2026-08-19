@@ -1,23 +1,23 @@
 const skillGroups = [
   {
     title: 'Languages',
-    skills: ['Java', 'JavaScript', 'TypeScript', 'Golang', 'Python', 'PHP', 'SQL'],
+    skills: ['Java', 'Python', 'JavaScript', 'TypeScript', 'Golang', 'SQL', 'HTML', 'CSS'],
   },
   {
     title: 'Databases',
-    skills: ['MSSQL', 'PostgreSQL', 'Redis', 'Vector Database', 'MinIO (S3-compatible)'],
+    skills: ['MSSQL', 'PostgreSQL', 'Redis', 'Qdrant'],
   },
   {
-    title: 'Cloud & DevOps',
-    skills: ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'REST APIs', 'Microservices', 'Github'],
+    title: 'Infrastructure',
+    skills: ['Docker', 'Kubernetes (Deployments, Probes, ConfigMaps)', 'AWS S3/CloudFront', 'GitHub Actions'],
   },
   {
     title: 'Libraries & Frameworks',
-    skills: ['Spring Boot', 'Spring Data JPA', 'Spring Security', 'Spring AI', 'React', 'Hibernate', 'Kafka'],
+    skills: ['Spring Boot', 'Spring Data JPA', 'Spring Security', 'Spring AI', 'React', 'Kafka'],
   },
   {
-    title: 'Concepts & Practices',
-    skills: ['RAG', 'JWT/OAuth', 'SAGA & Outbox Patterns', 'Resilience4J', 'JUnit', 'Mockito', 'Git'],
+    title: 'Practices',
+    skills: ['OAuth2 + JWT Validation', 'RAG', 'SAGA/Outbox', 'JUnit', 'Mockito', 'Testcontainers'],
   },
 ]
 
@@ -29,7 +29,7 @@ export default function Skills() {
           <span className="section-label">What I Work With</span>
           <h2 className="section-title">Skills &amp; Technologies</h2>
           <p className="section-subtitle">
-            A production-tested stack spanning backend microservices, distributed data systems, and full-stack AI-powered applications.
+            A production-tested stack spanning RAG pipelines, distributed backend systems, and full-stack applications shipped end to end.
           </p>
         </div>
 

@@ -68,7 +68,7 @@ export default function Contact() {
           <h2 className="section-title">Let's Connect</h2>
           <p className="contact-tagline">
             Open to full-time Software Engineering roles across backend, full-stack, and AI-powered platforms.
-            <br />Whether you're building distributed systems, GenAI applications, or scaling a platform from zero — I'd love to hear from you.
+            <br />I'm always building — check out <a href="https://stanza-app-ten.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-accent">Stanza</a>, or just say hi.
           </p>
         </div>
 

@@ -4,16 +4,16 @@ const experiences = [
     via: null,
     period: 'June 2024 – March 2026',
     location: 'Basking Ridge, NJ',
-    department: 'Spring Boot · Spring AI · Kubernetes · React/TypeScript',
+    department: 'Spring Boot · Spring AI · Qdrant · React/TypeScript',
     roles: [
       {
         title: 'Software Engineer',
         bullets: [
-          'Delivered an enterprise RAG document-assistant chatbot end-to-end on Spring Boot and Spring AI, orchestrating a vector database with LLM APIs to resolve employee and vendor queries against internal documentation, shipped as an independently scalable microservice on Kubernetes.',
-          'Hardened the AI assistant with role-based access control by validating Liferay-issued JWTs and filtering restricted content at retrieval time, guaranteeing unauthorized documents never reached the model.',
-          'Built master-data sync for a 3,000+ user e-procurement platform via Java/OSGi on SAP APIs, JAXB parsing, Service Builder persistence to MSSQL, with scheduled delta/full loads keeping cost-center, department, and org data accurate.',
-          'Built a full-stack content publishing platform in React/TypeScript and Spring Boot: REST content-creation API, multipart image upload to S3/CDN, and a filterable responsive gallery UI spanning JPA schema to frontend.',
-          'Developed a custom MVC portlet on Liferay DXP for a regulated medical-access portal, adding JavaScript validation, secure uploads, reCAPTCHA, Service Builder persistence, and a Kaleo approval workflow with automated email alerts.',
+          'Engineered a document Q&A feature for the company\'s React portal, building a Spring Boot RAG pipeline that chunks internal docs into overlapping 500-token windows, embeds them into Qdrant, and streams grounded, citation-backed answers to a React chat interface, returning no-answer responses below a top-k similarity threshold.',
+          'Secured retrieval to each caller\'s permissions by validating OAuth2 JWTs and injecting a group filter backed by a payload index on the Qdrant collection into every query, ensuring restricted documents never enter the candidate set.',
+          'Delivered a content publishing module on a two-engineer team, developing a Spring Boot REST API with multipart S3 upload and CloudFront delivery, paired with a React/TypeScript (TSX) gallery featuring server-side filtering and pagination, shipped through a GitHub Actions CI/CD pipeline running unit and integration tests on every PR before Docker image build and deploy.',
+          'Extended an SAP master-data sync for an e-procurement portal in Java/OSGi, parsing SOAP responses via JAXB and persisting to MSSQL through Service Builder, with nightly deltas on a last-modified watermark and a weekly full reload as a drift backstop.',
+          'Built a Liferay DXP MVC portlet for a medical access-request portal, wiring a three-stage Kaleo workflow to custom Java task handlers that stamped approver, timestamp, and decision to a Service Builder audit table on every state transition.',
         ],
       },
     ],
@@ -23,16 +23,16 @@ const experiences = [
     via: null,
     period: 'April 2021 – August 2023',
     location: 'Mumbai, MH',
-    department: 'Golang · Kafka · Redis · High-Throughput Ad Delivery',
+    department: 'SQL · Apache Hive · A/B Testing · DSP/SSP Integrations',
     roles: [
       {
-        title: 'Web Developer',
+        title: 'Product Analyst',
         bullets: [
-          'Ported a high-traffic ad-serving system (2.5k QPS) off PHP onto Golang, rewriting 30,000+ lines to achieve a 25% performance gain and 10% revenue lift, while lifting Go module test coverage from 30% to 75%.',
-          'Designed a multi-tier caching layer (in-process + Redis) paired with a Kafka-driven cache invalidation service, keeping data version-consistent across distributed service instances and removing stale-read issues in production ad delivery.',
-          'Drove development of lightweight JavaScript ad modules shipped to publisher pages under a 100ms execution budget, together with low-latency APIs returning ad payloads in both JSON and VAST XML formats.',
-          'Engineered the client-side JavaScript integration on publisher pages to consume those JSON and VAST XML payloads and render ad content within the same sub-100ms execution budget.',
-          'Created the Compact URL Service, cutting click-tracking URL length by 40–50% via binary-packed, encoded parameters that mask internal campaign identifiers without sacrificing redirect performance.',
+          'Partnered with UI/UX and product stakeholders to design and analyze end-to-end A/B experiments across 6+ native ad templates and new request parameters, running the analysis in SQL and Apache Hive to drive 3–5% lifts in CTR and revenue, expand native ad inventory, and shape the product roadmap.',
+          'Drove a custom cookie-sync integration from proposal to launch, authoring the PRD and running stakeholder analysis to align engineering, product, and partners, raising client match rate 21% and revenue $6.2K/day while serving as point of contact for DSP/SSP integrations.',
+          'Led root-cause investigations into revenue and attribution discrepancies, using funnel analysis in Hive/SQL to trace a 9% DSP gap to browser-version issues and driving cross-functional resolution with engineering and the partner to close it to 2.5%, with recurring RCAs preventing losses of up to $20.5K/day.',
+          'Built and owned analytics reporting pipelines consolidating cross-product advertiser metrics into a single view, cutting report generation from 2 days to instant access and enabling CXO-level decisions across the Ad Exchange\'s offerings.',
+          'Served as point of contact for DSP/SSP integrations and cookie-sync data flows, owning these web ad-serving touchpoints end to end and ensuring GDPR/CCPA compliance on PII throughout.',
         ],
       },
     ],
@@ -86,7 +86,7 @@ export default function Experience() {
         <span className="section-label">Career</span>
         <h2 className="section-title">Work Experience</h2>
         <p className="section-subtitle">
-          4+ years engineering AI-powered enterprise platforms, distributed backend systems, and high-throughput ad-tech infrastructure — from Spring AI microservices to Golang rewrites at scale.
+          4+ years across enterprise RAG systems and data-driven product analysis — from Spring AI microservices grounded in Qdrant to SQL-backed A/B testing at ad-exchange scale.
         </p>
       </div>
 

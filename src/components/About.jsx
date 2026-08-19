@@ -12,7 +12,7 @@ export default function About() {
     <section id="about" className="about-section" aria-label="About Viraj Almeida">
       <div className="fade-in-up">
         <span className="section-label">About</span>
-        <h2 className="section-title">Software Engineer, builder of things that ship.</h2>
+        <h2 className="section-title">Software Engineer building production-grade systems.</h2>
       </div>
 
       <div className="about-grid">

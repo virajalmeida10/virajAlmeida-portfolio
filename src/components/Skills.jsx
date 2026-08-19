@@ -1,23 +1,27 @@
 const skillGroups = [
   {
     title: 'Languages',
-    skills: ['Java', 'Python', 'JavaScript', 'TypeScript', 'Golang', 'SQL', 'HTML', 'CSS'],
+    skills: ['Java', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'],
   },
   {
     title: 'Databases',
-    skills: ['MSSQL', 'PostgreSQL', 'Redis', 'Qdrant'],
+    skills: ['PostgreSQL', 'MSSQL', 'Redis', 'Qdrant (Vector Search)'],
   },
   {
     title: 'Infrastructure',
-    skills: ['Docker', 'Kubernetes (Deployments, Probes, ConfigMaps)', 'AWS S3/CloudFront', 'GitHub Actions'],
+    skills: ['Docker', 'Kubernetes', 'AWS S3/CloudFront', 'GitHub Actions (CI/CD)', 'Render', 'Vercel', 'Neon'],
   },
   {
-    title: 'Libraries & Frameworks',
-    skills: ['Spring Boot', 'Spring Data JPA', 'Spring Security', 'Spring AI', 'React', 'Kafka'],
+    title: 'Frameworks & Libraries',
+    skills: ['Spring Boot', 'Spring Data JPA', 'Spring Security', 'Spring AI', 'React', 'Liferay DXP', 'Kafka'],
+  },
+  {
+    title: 'Enterprise & Integration',
+    skills: ['OSGi', 'Service Builder', 'Kaleo Workflow', 'JAXB', 'SOAP', 'REST APIs', 'Stripe'],
   },
   {
     title: 'Practices',
-    skills: ['OAuth2 + JWT Validation', 'RAG', 'SAGA/Outbox', 'JUnit', 'Mockito', 'Testcontainers'],
+    skills: ['OAuth2 + JWT', 'RAG', 'Vector Embeddings / Semantic Search', 'JUnit', 'Mockito', 'Testcontainers'],
   },
 ]
 

@@ -37,7 +37,7 @@ function useParticleCanvas(canvasRef) {
     const ctx = canvas.getContext('2d')
     let animationId
     let particles = []
-    const ACCENT = '96, 165, 250'
+    const ACCENT = '29, 78, 216'
     const PARTICLE_COUNT = 90
     const CONNECTION_DIST = 130
     const MOUSE_REPEL_DIST = 100

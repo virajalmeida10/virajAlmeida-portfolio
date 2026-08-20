@@ -9,11 +9,11 @@ const experiences = [
       {
         title: 'Software Engineer',
         bullets: [
-          'Engineered a document Q&A feature for the company\'s React portal, building a Spring Boot RAG pipeline that chunks internal docs into overlapping 500-token windows, embeds them into Qdrant, and streams grounded, citation-backed answers to a React chat interface, returning no-answer responses below a top-k similarity threshold.',
+          'Document Q&A feature for the company\'s enterprise portal giving staff grounded, citation-backed answers across 10,000+ internal documents — a Spring Boot RAG pipeline that chunks docs into overlapping 500-token windows, embeds them into Qdrant, and streams answers to a React chat interface below a top-k similarity threshold.',
           'Secured retrieval to each caller\'s permissions by validating OAuth2 JWTs and injecting a group filter backed by a payload index on the Qdrant collection into every query, ensuring restricted documents never enter the candidate set.',
-          'Delivered a content publishing module on a two-engineer team, developing a Spring Boot REST API with multipart S3 upload and CloudFront delivery, paired with a React/TypeScript (TSX) gallery featuring server-side filtering and pagination, shipped through a GitHub Actions CI/CD pipeline running unit and integration tests on every PR before Docker image build and deploy.',
-          'Extended an SAP master-data sync for an e-procurement portal in Java/OSGi, parsing SOAP responses via JAXB and persisting to MSSQL through Service Builder, with nightly deltas on a last-modified watermark and a weekly full reload as a drift backstop.',
-          'Built a Liferay DXP MVC portlet for a medical access-request portal, wiring a three-stage Kaleo workflow to custom Java task handlers that stamped approver, timestamp, and decision to a Service Builder audit table on every state transition.',
+          'Delivered a content publishing module (two-engineer team): a Spring Boot REST API with multipart S3 upload and CloudFront delivery, plus a React/TypeScript (TSX) gallery with server-side filtering and pagination shipped via a GitHub Actions CI/CD pipeline running unit and integration tests on every PR before Docker build and deploy.',
+          'Automated a medical access request approval process by building a Liferay DXP MVC portlet with a three-stage Kaleo workflow, replacing manual approvals with custom Java task handlers that stamped approver, timestamp, and decision to a Service Builder audit table on every state transition — giving the org a self-documenting approval trail.',
+          'Automated SAP master-data sync for an e-procurement portal in Java/OSGi, JAXB parsing SOAP responses into MSSQL via Service Builder with nightly delta and weekly full-reload jobs.',
         ],
       },
     ],

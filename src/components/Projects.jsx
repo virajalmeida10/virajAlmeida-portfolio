@@ -1,6 +1,7 @@
 import stanzaHome from '../assets/stanza/stanza-home.jpg'
 import stanzaSearch from '../assets/stanza/stanza-search.jpg'
 import stanzaDetail from '../assets/stanza/stanza-detail.jpg'
+import StanzaArchitecture from './StanzaArchitecture'
 
 const STANZA_LIVE = 'https://stanza-app-ten.vercel.app/'
 const STANZA_GITHUB = 'https://github.com/virajalmeida10/stanzaApp'
@@ -8,7 +9,7 @@ const STANZA_GITHUB = 'https://github.com/virajalmeida10/stanzaApp'
 const stanzaStack = ['Spring Boot', 'React/TypeScript', 'PostgreSQL', 'Claude API', 'Stripe', 'Docker']
 
 const stanzaBullets = [
-  'Built and deployed a full-stack hotel-booking platform (Spring Boot, React/TypeScript, PostgreSQL) across Render, Vercel, and Neon with Docker and Git-based auto-deploys.',
+  'Built and deployed Stanza, a full-stack hotel-booking platform across Render, Vercel, and Neon with Docker and Git-based auto-deploys.',
   'Engineered secure JWT authentication with refresh-token cookies and role-based access, plus Stripe Checkout payments with webhook-driven booking confirmation and automated email receipts.',
   'Integrated an AI booking assistant using the Anthropic Claude API with structured-output intent extraction, grounding natural-language queries against live inventory to prevent hallucinated results.',
   'Designed a concurrency-safe inventory and booking engine with dynamic pricing, reservation holds, and auto-expiry, backed by a responsive React UI with advanced filtering.',
@@ -111,6 +112,11 @@ export default function Projects() {
             </div>
           </div>
 
+          <div className="flagship-architecture">
+            <span className="flagship-architecture-label">System Architecture</span>
+            <StanzaArchitecture />
+          </div>
+
           <div className="flagship-body">
             <div className="flagship-badge-row">
               <span className="flagship-badge">Flagship Project · Live in Production</span>
@@ -124,7 +130,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <h3 className="flagship-title">Stanza — Accommodation Marketplace</h3>
+            <h3 className="flagship-title">Stanza: Full-Stack Accommodation Marketplace</h3>
             <p className="flagship-desc">
               A full-stack hotel-booking platform connecting travelers with verified stays — live search and filtering,
               Stripe-powered checkout, and an AI booking assistant that answers questions grounded in real inventory

@@ -920,6 +920,29 @@ button {
   background: var(--color-bg-2);
 }
 
+.flagship-architecture {
+  padding: 2.5rem 3rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-2);
+}
+
+.flagship-architecture-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-2);
+  margin-bottom: 1.5rem;
+}
+
+.flagship-architecture svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .flagship-body {
   padding: 2.75rem 3rem 3rem;
 }
@@ -1030,6 +1053,9 @@ button {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     aspect-ratio: 16 / 6;
+  }
+  .flagship-architecture {
+    padding: 1.75rem 1.5rem;
   }
   .flagship-body {
     padding: 2rem 1.5rem 2.25rem;
